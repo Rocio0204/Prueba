@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="AppPokeApi.Views.LoginPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Image Source="logo" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                       HeightRequest="250" WidthRequest="250"/>
+
+                <Entry Placeholder="Ingrese el correo" Grid.Row="1"
+                                       Text="{Binding Correo}"/>
+                <Entry Placeholder="Ingrese contraseña" Grid.Row="2"  
+                                       Text="{Binding Pass}" IsPassword="True"/>
+
+                <Button Text="Inicio de Sesión" BackgroundColor="#5599CD" TextColor="White"
+                        Grid.Row="3" CornerRadius="2" 
+                        Command="{Binding btninicioSesion}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</ContentPage>

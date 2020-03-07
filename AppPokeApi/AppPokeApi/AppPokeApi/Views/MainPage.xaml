@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppPokeApi.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout Margin="10">
+        <ScrollView>
+            <!--<ListView ItemsSource="{Binding _region}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>-->
+            <Frame Margin="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Nombre de la Región" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0"/>
+                    <Label Text="{Binding Nombre}" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Grid>
+            </Frame>
+            <!--/ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+        </ScrollView>
+        <Button Text="Equipos Creados"/>
+    </StackLayout>
+
+</ContentPage>
